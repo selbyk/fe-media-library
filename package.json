@@ -38,10 +38,11 @@
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
     "ember-load-initializers": "^0.5.0",
+    "ember-lodash": "0.0.6",
     "ember-resolver": "^2.0.3",
-    "loader.js": "^4.0.0",
     "express": "^4.13.4",
     "glob": "^7.0.3",
+    "loader.js": "^4.0.0",
     "morgan": "^1.7.0"
   }
 }
