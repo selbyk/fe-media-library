@@ -1,0 +1,14 @@
+{{album.artist.name}}<br>
+{{album.name}}<br>
+{{album.year}}<br>
+{{album.total_sold}}<br>
+{{album.updated_at}}<br>
+{{album.updated_at_formatted}}<br>
+
+{{#each album.comments as |comment|}}
+  {{comment.message}}
+{{else}}
+  No comments found.
+{{/each}}
+
+{{outlet}}

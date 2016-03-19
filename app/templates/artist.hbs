@@ -5,7 +5,9 @@
 {{artist.updated_at_formatted}}<br>
 
 {{#each artist.albums as |album|}}
-  {{album.name}}
+  {{#link-to 'album' album}}
+    {{album.name}}
+  {{/link-to}}
 {{else}}
   No artists found.
 {{/each}}
