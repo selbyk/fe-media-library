@@ -7,7 +7,11 @@ Springleaf front end ember.js interview app. This is an [ember-cli](http://www.e
 1. Clone this repo into any directory
 1. `cd` into the repo's root folder
 1. Run `npm install && bower install`
-1. Run `ember server` to start the server at `http://localhost:4200`
+1. Run `ember s -e testing` to start the livereload server
+
+Live reloaded site: http://localhost:4200
+
+Test Runner: http://localhost:4200/tests
 
 ## Features
 
@@ -22,7 +26,7 @@ Using the provided API endpoints, construct an application that includes the fea
 
 - controls to sort the artist list ascending/descending by artist name
 - paginate the album list to show two per page with pagination links
-- clicking on an album name will show a detail page for that album
+- ~~clicking on an album name will show a detail page for that album~~
 - album detail page should show a list of comments with the most recent at the top
 - provide a form that will save a comment on an album
 - validate that the form is filled in before allowing submission
