@@ -1,0 +1,8 @@
+{{#each artists as |artist|}}
+  {{#link-to 'artist' artist}}
+    {{artist.name}}
+  {{/link-to}}
+  <br>
+{{else}}
+    No artists found.
+{{/each}}

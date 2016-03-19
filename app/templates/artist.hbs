@@ -1,0 +1,13 @@
+{{artist.name}}<br>
+{{artist.based_in}}<br>
+{{artist.founding_year}}<br>
+{{artist.updated_at}}<br>
+{{artist.updated_at_formatted}}<br>
+
+{{#each artist.albums as |album|}}
+  {{album.name}}
+{{else}}
+  No artists found.
+{{/each}}
+
+{{outlet}}

@@ -15,8 +15,8 @@ Using the provided API endpoints, construct an application that includes the fea
 
 ### Must Haves
 
-- display links to all of the artists returned by the API
-- click on an artist to show a header with the artist's name and their albums
+- ~~display links to all of the artists returned by the API~~
+- ~~click on an artist to show a header with the artist's name and their albums~~
 
 ### Nice to Haves
 
@@ -33,7 +33,7 @@ Using the provided API endpoints, construct an application that includes the fea
 The following CRUD endpoints are provided:
 
 Artists | |
---- | --- 
+--- | ---
 `GET /api/artists` | index of the artists in the system
 `GET /api/artists/:id` | returns a single artist by its id
 `POST /api/artists` | creates a new artist record
@@ -69,4 +69,3 @@ Name | Values | Description
 
 The application comes with a very small set of seed data. If you want, you can add more data or columns via the `server/seeds.js` file.
 You can also add more endpoints if you want!
-
