@@ -15,23 +15,23 @@ module.exports = function(options) {
       var allRecords = data.all(singularName);
 
       var records = allRecords.sort(function(a, b) {
-        if (a[sort_on] > b[sort_on]) {
+        if (a[sort_on] < b[sort_on]) {
           return -1;
-        } else if (a[sort_on] < b[sort_on]) {
+        } else if (a[sort_on] > b[sort_on]) {
           return 1;
         } else {
           return 0;
         }
       });
-      
+
       if (sort_direction === 'desc') {
         records = records.reverse();
       }
-      
+
       var start = (page - 1) * per_page;
       var end = start + per_page;
       records = records.slice(start, end);
-      
+
       response[pluralName] = records;
       response['meta'] = {
         total: allRecords.length,
@@ -44,7 +44,7 @@ module.exports = function(options) {
       var requestData = JSON.parse(req.requestBody);
       var response = {};
       response[singularName] = data.save(singularName, requestData[singularName]);
-      
+
       res.json(response);
     });
 
