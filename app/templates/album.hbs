@@ -5,6 +5,8 @@
 {{album.updated_at}}<br>
 {{album.updated_at_formatted}}<br>
 
+{{audio-player url="/song.ogg"}}
+
 {{#each album.comments as |comment|}}
   {{comment.message}}
 {{else}}
