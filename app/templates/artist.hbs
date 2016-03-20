@@ -1,15 +1,28 @@
-{{artist.name}}<br>
-{{artist.based_in}}<br>
-{{artist.founding_year}}<br>
-{{artist.updated_at}}<br>
-{{artist.updated_at_formatted}}<br>
 
-{{#each artist.albums as |album|}}
+
+<h4>{{#link-to 'application.index'}}&#8624;Artist List{{/link-to}} > {{artist.name}}</h4>
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Name</h5>
+{{artist.name}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Hometown</h5>
+{{artist.based_in}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Year Founded</h5>
+{{artist.founding_year}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Updated</h5>
+{{artist.updated_at}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Updated</h5>
+{{artist.updated_at_formatted}}
+
+{{page-numbers class="center-align" min=1 max=totalPages current=currentPage range=5}}
+
+{{#each pagedAlbums as |album|}}
   {{#link-to 'album' album}}
     {{album.name}}
   {{/link-to}}
+  <br>
 {{else}}
-  No artists found.
+  No albums found.
 {{/each}}
+
+{{page-numbers class="center-align" min=1 max=totalPages current=currentPage range=5}}
 
 {{outlet}}
