@@ -1,3 +1,18 @@
+<select onchange={{action "sortBy" value="target.value"}}>
+  {{#each sortFields as |sortField|}}
+    <option value={{sortField.id}} selected={{eq sortField sort_on}}>
+      {{sortField.label}}
+    </option>
+  {{/each}}
+</select>
+<select onchange={{action "sortDirection" value="target.value"}}>
+  {{#each sortDirections as |sortDirection|}}
+    <option value={{sortDirection.id}} selected={{eq sortDirection sort_direction}}>
+      {{sortDirection.label}}
+    </option>
+  {{/each}}
+</select>
+<br>
 {{#each artists as |artist|}}
   {{#link-to 'artist' artist}}
     {{artist.name}}

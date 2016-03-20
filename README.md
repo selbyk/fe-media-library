@@ -24,7 +24,7 @@ Using the provided API endpoints, construct an application that includes the fea
 
 ### Nice to Haves
 
-- controls to sort the artist list ascending/descending by artist name
+- ~~controls to sort the artist list ascending/descending by artist name~~
 - paginate the album list to show two per page with pagination links
 - ~~clicking on an album name will show a detail page for that album~~
 - album detail page should show a list of comments with the most recent at the top
