@@ -6,9 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('application.index', {path: '/'});
+  this.route('index', { path: '/' });
   this.route('artist', { path: '/artist/:artist_id' });
-  this.route('album', { path: '/album/:album_id' });
+  this.route('album', { path: '/album/:album_id' }, () => {
+    this.route('index', { path: '/' });
+  }, function() {});
 });
 
 export default Router;

@@ -1,16 +1,19 @@
-{{album.artist.name}}<br>
-{{album.name}}<br>
-{{album.year}}<br>
-{{album.totalSold}}<br>
-{{album.updatedAt}}<br>
-{{album.updatedAtShort}}<br>
+<h4>{{#link-to 'index'}}&#8624;Artist List{{/link-to}} > {{#link-to 'artist' album.artist}}{{album.artist.name}}{{/link-to}} > {{album.name}}</h4>
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Title</h5>
+{{album.name}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Artist</h5>
+{{album.artist.name}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Release Year</h5>
+{{album.year}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Copies Sold</h5>
+{{album.totalSold}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Updated</h5>
+{{album.updatedAtShort}}
 
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Check out a sample:</h5>
 {{audio-player url="/song.ogg"}}
 
-{{#each album.comments as |comment|}}
-  {{comment.message}}
-{{else}}
-  No comments found.
-{{/each}}
-
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Tell us what you think!</h5>
+{{textarea value=newComment cols="80" rows="6"}}
+<br>
 {{outlet}}
