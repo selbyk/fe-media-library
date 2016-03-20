@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
   page: 1,
   sortFields: [
     {id: 'name', label: 'Name'},
-    {id: 'updated_at', label: 'Updated'},
+    {id: 'updatedAt', label: 'Updated'},
     {id: 'founding_year', label: 'Year Founded'}
   ],
   sortDirections: [
