@@ -11,7 +11,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{page-numbers}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().replace(/[ /\n]/gi,''), '←Prev1Next→');
 
   // Template block usage:
   this.render(hbs`
@@ -20,5 +20,5 @@ test('it renders', function(assert) {
     {{/page-numbers}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().replace(/[ /\n]/gi,''), '←Prev1Next→templateblocktext');
 });
