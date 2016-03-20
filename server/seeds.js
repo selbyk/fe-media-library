@@ -29,7 +29,7 @@ module.exports = {
 
     // albums
     var saveAlbum = function(data) {
-      database.save('album', data);  
+      database.save('album', data);
     };
 
     [{
@@ -101,9 +101,8 @@ module.exports = {
 
     [{
       author: 'Evan Willum',
-      album_id: 9,
+      album_id: 10,
       message: 'Good album, but I liked the first one.',
     }].map(saveComment);
   },
 };
-
