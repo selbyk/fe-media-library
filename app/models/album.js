@@ -6,5 +6,7 @@ export default DS.Model.extend(ModelUpdatedAtMixin, {
   name: DS.attr('string'),
   year: DS.attr('number'),
   totalSold: DS.attr('number'),
-  comments: DS.hasMany('comment')
+  comments: DS.hasMany('comment', {
+    inverse: 'album'
+  })
 });
