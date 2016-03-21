@@ -32,7 +32,7 @@ Using the provided API endpoints, construct an application that includes the fea
 - ~~album detail page should show a list of comments with the most recent at the top~~
 - ~~provide a form that will save a comment on an album~~
 - ~~validate that the form is filled in before allowing submission~~
-- suport deleting comments
+- ~~suport deleting comments~~
 
 ## API
 

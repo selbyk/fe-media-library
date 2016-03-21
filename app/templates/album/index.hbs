@@ -7,6 +7,8 @@
  <br>
  <b>Date:</b> {{comment.updatedAt}}
  <br>
+ <button {{action 'deleteComment' comment}} class="btn">Delete Comment</button>
+ <br>
  <br>
 {{else}}
   No comments found.
