@@ -7,6 +7,9 @@ export default ActiveModelSerializer.extend({
   serializeIntoHash(data, type, record, options) {
     var root = record.modelName;
     data[root] = this.serialize(record, options);
+    if(typeof data[root].album_id === 'string'){
+      data[root].album_id = Number.parseInt(data[root].album_id);
+    }
     delete data[root].updated_at;
   }
 });
