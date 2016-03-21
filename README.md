@@ -9,9 +9,11 @@ Springleaf front end ember.js interview app. This is an [ember-cli](http://www.e
 1. Run `npm install && bower install`
 1. Run `ember s -e testing` to start the livereload server
 
-Live reloaded site: http://localhost:4200
+Livereload ember server:  [http://localhost:4200](http://localhost:4200)
 
-Test Runner: http://localhost:4200/tests
+Local tests:  [http://localhost:4200/tests](http://localhost:4200/tests)
+
+travis-ci automated testing: [https://travis-ci.org/selbyk/fe-media-library](https://travis-ci.org/selbyk/fe-media-library)
 
 ## Features
 
