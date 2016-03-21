@@ -4,7 +4,13 @@ module.exports = function(options) {
 
   return function(app, data) {
     var express = require('express');
+    var bodyParser = require('body-parser');
     var theRouter = express.Router();
+
+    theRouter.use(bodyParser.json()); // for parsing application/json
+    theRouter.use(bodyParser.urlencoded({
+      extended: true
+    })); // for parsing
 
     theRouter.get('/', function(req, res) {
       var page = parseInt(req.query.page) || 1;
@@ -41,7 +47,7 @@ module.exports = function(options) {
     });
 
     theRouter.post('/', function(req, res) {
-      var requestData = JSON.parse(req.requestBody);
+      var requestData = req.body;
       var response = {};
       response[singularName] = data.save(singularName, requestData[singularName]);
 
