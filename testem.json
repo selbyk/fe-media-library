@@ -8,5 +8,41 @@
   "launch_in_dev": [
     "PhantomJS",
     "Chrome"
-  ]
+  ],
+  "launchers": {
+    "SL_firefox_public_Windows_7": {
+      "exe": "ember",
+      "args": [
+        "sauce:launch",
+        "-b",
+        "firefox",
+        "--vi",
+        "public",
+        "-p",
+        "Windows 7",
+        "--at",
+        "--no-ct",
+        "--u"
+      ],
+      "protocol": "browser"
+    },
+    "SL_internet_explorer_public_11_Windows_8_1": {
+      "exe": "ember",
+      "args": [
+        "sauce:launch",
+        "-b",
+        "internet explorer",
+        "-v",
+        "11",
+        "--vi",
+        "public",
+        "-p",
+        "Windows 8.1",
+        "--at",
+        "--no-ct",
+        "--u"
+      ],
+      "protocol": "browser"
+    }
+  }
 }
