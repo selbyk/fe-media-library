@@ -1,22 +1,40 @@
 <h4>{{#link-to 'index'}}&#8624;Artists{{/link-to}} > {{#link-to 'artist' album.artist}}{{album.artist.name}}{{/link-to}} > {{album.name}}</h4>
-<h5 style="padding-bottom: 0;margin-bottom: 0;">Title</h5>
-{{album.name}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Title</h5> {{album.name}}
 <h5 style="padding-bottom: 0;margin-bottom: 0;">Artist</h5>
 {{#link-to 'artist' album.artist}}{{album.artist.name}}{{/link-to}}
-<h5 style="padding-bottom: 0;margin-bottom: 0;">Release Year</h5>
-{{album.year}}
-<h5 style="padding-bottom: 0;margin-bottom: 0;">Copies Sold</h5>
-{{album.totalSold}}
-<h5 style="padding-bottom: 0;margin-bottom: 0;">Updated</h5>
-{{album.updatedAtShort}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Release Year</h5> {{album.year}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Copies Sold</h5> {{album.totalSold}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Updated</h5> {{album.updatedAtShort}}
 
-<h5 style="padding-bottom: 0;margin-bottom: 0;">Check out a sample: </h5>
-Some Song by {{#link-to 'artist' album.artist}}{{album.artist.name}}{{/link-to}}
-{{#audio-player url="/song.ogg"}}
+<h5 style="padding-bottom: 0;margin-bottom: 0;">Check out a sample: </h5> Some Song by
+{{#link-to 'artist' album.artist}}{{album.artist.name}}{{/link-to}}
+{{#audio-player url="/song.ogg" }}
   <div xmlns:cc="http://creativecommons.org/ns#" about="urn:sha1:2BE737HFSSDB25DYAI7DUJQ2B3ULR3DE">Credit: <a rel="cc:attributionURL" property="cc:attributionName" href="http://ccmixter.org/files/SackJo22/40534"> SackJo22</a> / <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> / Tracks mixed with <a href='http://www.audacityteam.org/'>Audactiy</a></div>
 {{/audio-player}}
 
 <h5 style="padding-bottom: 0;margin-bottom: 0;">Tell us what you think!</h5>
-{{textarea value=newComment cols="80" rows="6"}}
+<form class="form-horizontal" {{action 'saveComment' on='submit'}}>
+  <div class="control-group">
+    <div class="control-label">
+      <label>Author Name</label>
+    </div>
+
+    <div class="controls">
+      {{input value=newComment.author type="text"}}
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label">
+      <label>Message</label>
+    </div>
+
+    <div class="controls">
+      {{textarea value=newComment.message rows="6"}}
+    </div>
+  </div>
+
+  <button type="submit" class="btn">Save Comment</button>
+</form>
 <br>
 {{outlet}}

@@ -1,5 +1,13 @@
 {{#each comments as |comment|}}
-  {{comment.message}}
+ <b>Author:</b> {{comment.author}}
+ <br>
+ <b>Comment:</b>
+ <br>
+ {{comment.message}}
+ <br>
+ <b>Date:</b> {{comment.updatedAt}}
+ <br>
+ <br>
 {{else}}
   No comments found.
 {{/each}}
