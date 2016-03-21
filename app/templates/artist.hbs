@@ -1,4 +1,4 @@
-<h4>{{#link-to 'index'}}&#8624;Artist List{{/link-to}} > {{artist.name}}</h4>
+<h4>{{#link-to 'index'}}&#8624;Artists{{/link-to}} > {{artist.name}}</h4>
 <h5 style="padding-bottom: 0;margin-bottom: 0;">Name</h5>
 {{artist.name}}
 <h5 style="padding-bottom: 0;margin-bottom: 0;">Hometown</h5>
@@ -9,6 +9,9 @@
 {{artist.updatedAt}}
 <h5 style="padding-bottom: 0;margin-bottom: 0;">Updated</h5>
 {{artist.updatedAtShort}}
+
+<h4>Albums</h4>
+
 
 {{page-numbers class="center-align" min=1 max=totalPages current=currentPage range=5}}
 

@@ -1,12 +1,99 @@
 body {
   font-size: 1.5rem;
   line-height: 30px;
+  margin-bottom: 150px;
 }
+
+main {
+  background: white;
+  width: 80%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+main div {
+  color: #041d2d;
+  width: 90%;
+}
+
 a {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-  background-color: transparent;
+	position: relative;
+	display: inline-block;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
 }
+
+a:hover,
+a:focus {
+	outline: none;
+}
+
+/* Effect 17: move up fade out, push border */
+a {
+	color: #10649b;
+	text-shadow: none;
+	padding: 10px 0;
+}
+
+a::before {
+	color: #10649b;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	content: attr(data-hover);
+	position: absolute;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #F2A10B;
+	opacity: 0;
+	-webkit-transform: translateY(5px);
+	-moz-transform: translateY(5px);
+	transform: translateY(5px);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+a:hover::before,
+a:focus::before {
+	opacity: 0;
+	-webkit-transform: translateY(-2px);
+	-moz-transform: translateY(-2px);
+	transform: translateY(-2px);
+}
+
+a:hover::after,
+a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.text-small {
+  font-size: 1rem;
+}
+
+.right {
+    text-align: right;
+}
+
 .pagination li {
   display: inline-block;
   font-size: 1.2rem;
@@ -18,6 +105,7 @@ a {
 .pagination li a {
   color: #444;
 }
+
 .pagination li.active {
   background-color: #ee6e73;
   color: #fff;
