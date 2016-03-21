@@ -1,4 +1,4 @@
-# Media Catalog
+# Media Catalog [![Build Status](https://travis-ci.org/selbyk/fe-media-library.svg?branch=master)](https://travis-ci.org/selbyk/fe-media-library)
 
 Springleaf front end ember.js interview app. This is an [ember-cli](http://www.ember-cli.com/) application using [ember-data](http://emberjs.com/api/data/) with the [active-model-adapter](https://github.com/ember-data/active-model-adapter) addon. If you're new to Ember, try the ember-cli generators!
 
