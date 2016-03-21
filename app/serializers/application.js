@@ -7,7 +7,6 @@ const inflector = new Ember.Inflector(Ember.Inflector.defaultRules);
 
 export default ActiveModelSerializer.extend({
   serializeIntoHash(hash, typeClass, snapshot, options) {
-    let _this = this;
     let normalizedRootKey = this.payloadKeyFromModelName(typeClass.modelName);
     let record = snapshot.record;
     // serialize the model
