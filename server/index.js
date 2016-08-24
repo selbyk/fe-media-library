@@ -23,4 +23,5 @@ module.exports = function(app) {
   mocks.forEach(function(route) { route(app, database); });
   proxies.forEach(function(route) { route(app); });
 
+  return app;
 };
